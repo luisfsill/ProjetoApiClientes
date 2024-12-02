@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "tsc",
+    "build": "npm install && tsc",
     "start": "node dist/server.js",
     "postinstall": "prisma generate"
   },
@@ -13,8 +13,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@types/node": "^20.10.5",
-    "@types/node-fetch": "^2.6.10",
+    "@types/node": "*",
     "prisma": "^5.22.0",
     "typescript": "^5.3.3"
   },
@@ -22,7 +21,6 @@
     "@fastify/cors": "^10.0.1",
     "@prisma/client": "^5.22.0",
     "fastify": "^5.1.0",
-    "node-fetch": "^2.7.0",
     "tsx": "^4.7.1"
   }
 }
