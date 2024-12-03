@@ -21,4 +21,9 @@ async function routes(fastify, options) {
     fastify.put("/customer/:id", async (request, reply) => {
         return new UpdateCustomerController_1.UpdateCustomerController().handle(request, reply);
     });
+
+    fastify.get("/", async (request, reply) => {
+        return { message: "Bem-vindo à API!" };
+    });
+    
 }

@@ -14,7 +14,7 @@ const start = async () => {
     await app.register(cors_1.default);
     await app.register(routes_1.routes);
     try {
-        await app.listen({ port: 8080 });
+        await app.listen({ port: process.env.PORT || 8080, host: '0.0.0.0' });
     }
     catch (err) {
         process.exit(1);
